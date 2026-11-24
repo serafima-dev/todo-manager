@@ -1,40 +1,61 @@
 # Todo Manager
 
-A console-based task manager built with Python and OOP, allowing users to create, view, complete, and delete tasks.
+Консольное приложение для управления списком задач, написанное на Python с использованием объектно-ориентированного программирования (ООП). 
 
-## Features
+Приложение позволяет создавать задачи, просматривать список дел, отмечать выполненные задачи и удалять ненужные.
 
-- View all tasks
-- Add new tasks
-- Mark tasks as completed
-- Delete tasks
-- Handle invalid user input
+## Возможности
 
-## Technologies
+- Добавление новых задач
+- Просмотр списка задач
+- Отметка задач как выполненных
+- Удаление задач
+- Отображение статуса выполнения каждой задачи
+- Обработка ошибок при вводе номера задачи
+
+## Используемые технологии
 
 - Python 3
-- Object-Oriented Programming (OOP)
+- Объектно-ориентированное программирование (ООП)
 
-## How to run
+## Принцип работы
 
-Clone the repository:
+Приложение построено на основе двух классов:
+
+- `Task` — описывает отдельную задачу, хранит её название и статус выполнения.
+
+- `TodoManager` — управляет списком задач: добавляет, отображает, завершает и удаляет задачи.
+
+## Запуск проекта
+
+1. Клонируйте репозиторий::
 ```bash
-git clone https://github.com/felixxx888/todo-manager.git
+git clone https://github.com/serafima-dev/todo-manager.git
 ```
 
-Navigate to the project directory:
+2. Перейдите в папку проекта:
 ```bash
 cd todo-manager
 ```
 
-Run the program:
+3. Запустите приложение:
 ```bash
 python todo_manager.py
 ```
 
-## How it works
+## Интерфейс
 
-The project uses two classes:
+Взаимодействие с приложением осуществляется через консольное меню.
 
-- `Task` — represents a single task and stores its title and completion status.
-- `TodoManager` — manages the list of tasks and provides methods for adding, completing, displaying, and deleting tasks.
+Для каждой задачи отображается её порядковый номер, название и статус выполнения:
+
+- [ ] — задача ещё не выполнена.
+
+- [✔] — задача выполнена.
+
+## Обработка ошибок
+
+Приложение обрабатывает ошибки при вводе номера задачи:
+
+- Ввод значения, не являющегося числом.
+- Попытка обратиться к задаче с несуществующим номером.
